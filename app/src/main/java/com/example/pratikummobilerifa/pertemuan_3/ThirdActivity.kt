@@ -2,29 +2,22 @@ package com.example.pratikummobilerifa.pertemuan_3
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pratikummobilerifa.R
-import com.example.pratikummobilerifa.databinding.ActivityThirdBinding
+import com.example.pratikummobilerifa.pertemuan_2.SecondActivity
 
 class ThirdActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityThirdBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityThirdBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_third)
 
-        //val btnKirim = findViewById<Button>(R.id.btnKirim)
-        //val inputNoTujuan = findViewById<EditText>(R.id.inputNoTujuan)
-
-        binding.btnKirim.setOnClickListener {
-            val nomor = binding.inputNoTujuan.text
-            Toast.makeText(this, "Pesan berhasil dikirim ke: $nomor", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ThirdResultActivity::class.java)
+        val navHome = findViewById<LinearLayout>(R.id.navHome)
+        navHome.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }

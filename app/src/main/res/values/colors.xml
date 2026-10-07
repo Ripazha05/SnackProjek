@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="Hijau">#4900BCD4</color>
+
+    <color name="bm_cyan">#06B6D4</color>
+    <color name="bm_dark">#111827</color>
+    <color name="bm_blue">#2563EB</color>
+    <color name="bm_gray">#4B5563</color>
+    <color name="bm_red">#EF4444</color>
+    <color name="bm_background">#F9FAFB</color>
+    <color name="bm_yellow">#FBBF24</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
 </resources>
