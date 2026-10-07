@@ -1,33 +1,32 @@
-package com.example.pratikummobilerifa.pertemuan_2
+package com.example.pratikummobilerifa.pertemuan_3
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.LinearLayout
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.pratikummobilerifa.R
-import com.example.pratikummobilerifa.pertemuan_3.ThirdActivity
 
-class SecondActivity : AppCompatActivity() {
+class WebActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
+        setContentView(R.layout.activity_web)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.title = "Beranda - BM Perabot"
+
+        supportActionBar?.title = "Informasi & Katalog Web"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
+
         toolbar.setNavigationOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        val navAccount = findViewById<LinearLayout>(R.id.navAccount)
-        navAccount.setOnClickListener {
-            val intent = Intent(this, ThirdActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
+        val webView = findViewById<WebView>(R.id.webView)
+        webView.webViewClient = WebViewClient()
+        webView.settings.javaScriptEnabled = true
+        webView.loadUrl("https://www.ikea.co.id")
     }
 }

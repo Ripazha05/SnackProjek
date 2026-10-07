@@ -1,483 +1,480 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/bm_background">
 
-    <!-- Scrollable Content -->
-    <ScrollView
+    <include
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/bottomNav"
-        android:fillViewport="true">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-        <LinearLayout
+        <!-- Scrollable Content -->
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottomNav"
+            android:fillViewport="true">
 
-            <!-- Profile Header -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="10dp">
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:background="@drawable/bg_circle_avatar"
-                    android:padding="12dp"
-                    android:src="@drawable/smartphone"
-                    android:contentDescription="Avatar" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="16dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ripaaulia"
-                        android:textColor="@color/bm_dark"
-                        android:textSize="20sp"
-                        android:fontFamily="@font/inter_bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Ripaa@Gmail.com"
-                        android:textColor="@color/bm_gray"
-                        android:textSize="13sp"
-                        android:fontFamily="@font/inter_regular" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- Membership Banner -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_membership"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@android:drawable/btn_star_big_on"
-                    android:tint="@color/bm_blue"
-                    android:contentDescription="Star" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginStart="10dp"
-                    android:text="Loyal Member Perabot BM"
-                    android:textColor="@color/bm_blue"
-                    android:textSize="13sp"
-                    android:fontFamily="@font/inter_semibold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1.240 Poin"
-                    android:textColor="@color/bm_blue"
-                    android:textSize="13sp"
-                    android:fontFamily="@font/inter_bold" />
-            </LinearLayout>
-
-            <!-- Menu List Card -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_menu_card"
                 android:orientation="vertical"
-                android:paddingTop="6dp"
-                android:paddingBottom="6dp">
+                android:padding="20dp">
 
-                <!-- Item 1: Pesanan Saya -->
+                <!-- Profile Header -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:gravity="center_vertical"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:clickable="true"
-                    android:focusable="true">
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="10dp">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_agenda"
-                        android:tint="@color/bm_dark"
-                        android:contentDescription="Pesanan" />
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/bg_circle_avatar"
+                        android:padding="12dp"
+                        android:src="@drawable/smartphone"
+                        android:contentDescription="Avatar" />
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:layout_marginStart="16dp"
-                        android:text="Pesanan Saya"
-                        android:textColor="@color/bm_dark"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/inter_medium" />
+                        android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@android:drawable/ic_media_play"
-                        android:tint="@color/bm_gray"
-                        android:contentDescription="Arrow" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ripaaulia"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="20sp"
+                            android:fontFamily="@font/inter_bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Ripaa@Gmail.com"
+                            android:textColor="@color/bm_gray"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/inter_regular" />
+                    </LinearLayout>
                 </LinearLayout>
 
-                <!-- Item 2: Alamat Pengiriman -->
+                <!-- Membership Banner -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_membership"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:clickable="true"
-                    android:focusable="true">
+                    android:padding="16dp">
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_mapmode"
-                        android:tint="@color/bm_dark"
-                        android:contentDescription="Alamat" />
+                        android:src="@android:drawable/btn_star_big_on"
+                        app:tint="@color/bm_blue"
+                        android:contentDescription="Star" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginStart="16dp"
-                        android:text="Alamat Pengiriman"
-                        android:textColor="@color/bm_dark"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/inter_medium" />
+                        android:layout_marginStart="10dp"
+                        android:text="Loyal Member Perabot BM"
+                        android:textColor="@color/bm_blue"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/inter_semibold" />
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@android:drawable/ic_media_play"
-                        android:tint="@color/bm_gray"
-                        android:contentDescription="Arrow" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.240 Poin"
+                        android:textColor="@color/bm_blue"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/inter_bold" />
                 </LinearLayout>
 
-                <!-- Item 3: Metode Pembayaran -->
+                <!-- Menu List Card -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:clickable="true"
-                    android:focusable="true">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_menu_card"
+                    android:orientation="vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp">
 
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_slideshow"
-                        android:tint="@color/bm_dark"
-                        android:contentDescription="Pembayaran" />
+                    <!-- Item 1: Pesanan Saya -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true">
 
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="16dp"
-                        android:text="Metode Pembayaran"
-                        android:textColor="@color/bm_dark"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/inter_medium" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_agenda"
+                            android:contentDescription="Pesanan" />
 
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@android:drawable/ic_media_play"
-                        android:tint="@color/bm_gray"
-                        android:contentDescription="Arrow" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Pesanan Saya"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter_medium" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            android:contentDescription="Arrow" />
+                    </LinearLayout>
+
+                    <!-- Item 2: Alamat Pengiriman -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_mapmode"
+                            android:contentDescription="Alamat" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Alamat Pengiriman"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter_medium" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            android:contentDescription="Arrow" />
+                    </LinearLayout>
+
+                    <!-- Item 3: Metode Pembayaran -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_slideshow"
+                            android:contentDescription="Pembayaran" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Metode Pembayaran"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter_medium" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            android:contentDescription="Arrow" />
+                    </LinearLayout>
+
+                    <!-- Item 4: Notifikasi -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_popup_reminder"
+                            android:contentDescription="Notifikasi" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Notifikasi"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter_medium" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            android:contentDescription="Arrow" />
+                    </LinearLayout>
+
+                    <!-- Item 5: Bantuan -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_help"
+                            android:contentDescription="Bantuan" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Bantuan"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter_medium" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            android:contentDescription="Arrow" />
+                    </LinearLayout>
+
+                    <!-- Item 6: Tentang Aplikasi (Opens Web Activity) -->
+                    <LinearLayout
+                        android:id="@+id/btnTentangAplikasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_info_details"
+                            android:contentDescription="Tentang" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Tentang Aplikasi (Buka Web)"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter_medium" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            android:contentDescription="Arrow" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
-                <!-- Item 4: Notifikasi -->
+                <!-- Keluar Akun Button -->
                 <LinearLayout
+                    android:id="@+id/btnLogoutAccount"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    android:gravity="center_vertical"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/bg_logout_button"
+                    android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
                     android:clickable="true"
                     android:focusable="true">
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:src="@android:drawable/ic_popup_reminder"
-                        android:tint="@color/bm_dark"
-                        android:contentDescription="Notifikasi" />
+                        android:src="@android:drawable/ic_menu_revert"
+                        android:contentDescription="Keluar" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="16dp"
-                        android:text="Notifikasi"
-                        android:textColor="@color/bm_dark"
+                        android:layout_marginStart="8dp"
+                        android:text="Keluar Akun"
+                        android:textColor="@color/bm_red"
                         android:textSize="14sp"
-                        android:fontFamily="@font/inter_medium" />
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@android:drawable/ic_media_play"
-                        android:tint="@color/bm_gray"
-                        android:contentDescription="Arrow" />
-                </LinearLayout>
-
-                <!-- Item 5: Bantuan -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_help"
-                        android:tint="@color/bm_dark"
-                        android:contentDescription="Bantuan" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="16dp"
-                        android:text="Bantuan"
-                        android:textColor="@color/bm_dark"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/inter_medium" />
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@android:drawable/ic_media_play"
-                        android:tint="@color/bm_gray"
-                        android:contentDescription="Arrow" />
-                </LinearLayout>
-
-                <!-- Item 6: Tentang Aplikasi -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="52dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@android:drawable/ic_menu_info_details"
-                        android:tint="@color/bm_dark"
-                        android:contentDescription="Tentang" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginStart="16dp"
-                        android:text="Tentang Aplikasi"
-                        android:textColor="@color/bm_dark"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/inter_medium" />
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@android:drawable/ic_media_play"
-                        android:tint="@color/bm_gray"
-                        android:contentDescription="Arrow" />
+                        android:fontFamily="@font/inter_semibold" />
                 </LinearLayout>
 
             </LinearLayout>
+        </ScrollView>
 
-            <!-- Keluar Akun Button -->
+        <!-- Bottom Navigation Bar -->
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Tab 1: Beranda -->
             <LinearLayout
-                android:id="@+id/btnLogoutAccount"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/bg_logout_button"
+                android:id="@+id/navHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:clickable="true"
                 android:focusable="true">
 
                 <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@android:drawable/ic_menu_revert"
-                    android:tint="@color/bm_red"
-                    android:contentDescription="Keluar" />
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    android:contentDescription="Beranda" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="Keluar Akun"
-                    android:textColor="@color/bm_red"
-                    android:textSize="14sp"
+                    android:layout_marginTop="2dp"
+                    android:text="Beranda"
+                    android:textColor="@color/bm_gray"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/inter_medium" />
+            </LinearLayout>
+
+            <!-- Tab 2: Kategori -->
+            <LinearLayout
+                android:id="@+id/navCategory"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_sort_by_size"
+                    android:contentDescription="Kategori" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Kategori"
+                    android:textColor="@color/bm_gray"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/inter_medium" />
+            </LinearLayout>
+
+            <!-- Tab 3: Keranjang -->
+            <LinearLayout
+                android:id="@+id/navCart"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    android:contentDescription="Keranjang" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Keranjang"
+                    android:textColor="@color/bm_gray"
+                    android:textSize="11sp"
+                    android:fontFamily="@font/inter_medium" />
+            </LinearLayout>
+
+            <!-- Tab 4: Akun (Selected) -->
+            <LinearLayout
+                android:id="@+id/navAccount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:contentDescription="Akun" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Akun"
+                    android:textColor="@color/bm_blue"
+                    android:textSize="11sp"
                     android:fontFamily="@font/inter_semibold" />
             </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
 
-    <!-- Bottom Navigation Bar -->
-    <LinearLayout
-        android:id="@+id/bottomNav"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        android:elevation="8dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+    </RelativeLayout>
 
-        <!-- Tab 1: Beranda -->
-        <LinearLayout
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@android:drawable/ic_menu_myplaces"
-                android:tint="@color/bm_gray"
-                android:contentDescription="Beranda" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Beranda"
-                android:textColor="@color/bm_gray"
-                android:textSize="11sp"
-                android:fontFamily="@font/inter_medium" />
-        </LinearLayout>
-
-        <!-- Tab 2: Kategori -->
-        <LinearLayout
-            android:id="@+id/navCategory"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@android:drawable/ic_menu_sort_by_size"
-                android:tint="@color/bm_gray"
-                android:contentDescription="Kategori" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Kategori"
-                android:textColor="@color/bm_gray"
-                android:textSize="11sp"
-                android:fontFamily="@font/inter_medium" />
-        </LinearLayout>
-
-        <!-- Tab 3: Keranjang -->
-        <LinearLayout
-            android:id="@+id/navCart"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@android:drawable/ic_menu_manage"
-                android:tint="@color/bm_gray"
-                android:contentDescription="Keranjang" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Keranjang"
-                android:textColor="@color/bm_gray"
-                android:textSize="11sp"
-                android:fontFamily="@font/inter_medium" />
-        </LinearLayout>
-
-        <!-- Tab 4: Akun (Selected) -->
-        <LinearLayout
-            android:id="@+id/navAccount"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:src="@android:drawable/ic_menu_my_calendar"
-                android:tint="@color/bm_blue"
-                android:contentDescription="Akun" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Akun"
-                android:textColor="@color/bm_blue"
-                android:textSize="11sp"
-                android:fontFamily="@font/inter_semibold" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
