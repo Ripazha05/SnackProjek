@@ -321,6 +321,42 @@
                             android:contentDescription="Arrow" />
                     </LinearLayout>
 
+                    <!-- Item 7: Profil Developer -->
+                    <LinearLayout
+                        android:id="@+id/btnProfilDeveloper"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@android:drawable/ic_menu_myplaces"
+                            android:contentDescription="Developer" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginStart="16dp"
+                            android:text="Profil Developer"
+                            android:textColor="@color/bm_dark"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/inter_medium" />
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@android:drawable/ic_media_play"
+                            android:contentDescription="Arrow" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <!-- Keluar Akun Button -->

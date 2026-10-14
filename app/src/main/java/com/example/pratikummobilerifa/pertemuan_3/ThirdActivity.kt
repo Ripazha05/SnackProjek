@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.pratikummobilerifa.MainActivity
 import com.example.pratikummobilerifa.R
 import com.example.pratikummobilerifa.pertemuan_2.SecondActivity
 
@@ -34,6 +35,24 @@ class ThirdActivity : AppCompatActivity() {
         btnTentang.setOnClickListener {
             val intent = Intent(this, WebActivity::class.java)
             startActivity(intent)
+        }
+
+        val btnProfil = findViewById<LinearLayout>(R.id.btnProfilDeveloper)
+        btnProfil.setOnClickListener {
+            val intent = Intent(this, DeveloperActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnLogout = findViewById<LinearLayout>(R.id.btnLogoutAccount)
+        btnLogout.setOnClickListener {
+            val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+            val editor = sharedPref.edit()
+            editor.clear()
+            editor.apply()
+
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

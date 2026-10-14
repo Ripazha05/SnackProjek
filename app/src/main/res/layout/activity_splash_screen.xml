@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bm_blue"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/bm_logo"
+        android:scaleType="centerInside"
+        android:background="@drawable/bg_circle_avatar"
+        android:padding="16dp"
+        android:contentDescription="Logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="BM Perabot"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:fontFamily="@font/inter_bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Katalog &amp; Belanja Perabot Terbaik"
+        android:textColor="#E0E7FF"
+        android:textSize="14sp"
+        android:fontFamily="@font/inter_regular" />
+
+</LinearLayout>

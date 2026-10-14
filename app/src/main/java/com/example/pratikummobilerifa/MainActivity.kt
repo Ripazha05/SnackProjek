@@ -20,22 +20,26 @@ class MainActivity : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
 
-            // Menampilkan pesan di bagian bawah
+            val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+            val editor = sharedPref.edit()
+            editor.putBoolean("isLogin", true)
+            editor.putString("username", "Ripaaulia")
+            editor.apply()
+
             Toast.makeText(
                 this,
                 "Berhasil masuk",
                 Toast.LENGTH_SHORT
             ).show()
 
-            // Menunggu sebentar kemudian pindah ke katalog
             Handler(Looper.getMainLooper()).postDelayed({
 
                 val intent = Intent(
                     this,
                     SecondActivity::class.java
                 )
-
                 startActivity(intent)
+                finish()
 
             }, 800)
         }

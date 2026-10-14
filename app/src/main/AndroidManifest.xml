@@ -15,9 +15,8 @@
         android:theme="@style/Theme.PratikumMobileRifa">
 
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:name=".SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -25,10 +24,14 @@
         </activity>
 
         <activity
-            android:name=".pertemuan_2.SecondActivity"
+            android:name=".MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
 
+        <activity
+            android:name=".pertemuan_2.SecondActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
 
         <activity
             android:name=".pertemuan_3.ThirdActivity"
@@ -41,6 +44,10 @@
 
         <activity
             android:name=".pertemuan_3.WebActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".pertemuan_3.DeveloperActivity"
             android:exported="false" />
 
     </application>
