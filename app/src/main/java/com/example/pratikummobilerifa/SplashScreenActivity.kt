@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.example.pratikummobilerifa.pertemuan_2.SecondActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -20,15 +19,14 @@ class SplashScreenActivity : AppCompatActivity() {
             val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
             val isLogin = sharedPref.getBoolean("isLogin", false)
 
-            if (isLogin) {
-                val intent = Intent(this@SplashScreenActivity, SecondActivity::class.java)
-                startActivity(intent)
-                finish()
+            val intent = if (isLogin) {
+                Intent(this@SplashScreenActivity, BaseActivity::class.java)
             } else {
-                val intent = Intent(this@SplashScreenActivity, MainActivity::class.java)
-                startActivity(intent)
-                finish()
+                Intent(this@SplashScreenActivity, MainActivity::class.java)
             }
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            finish()
         }
     }
 }

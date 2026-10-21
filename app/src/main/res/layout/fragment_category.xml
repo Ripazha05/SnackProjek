@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bm_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kategori Perabot"
+            android:textColor="@color/bm_dark"
+            android:textSize="22sp"
+            android:fontFamily="@font/inter_bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Pilih kategori perabot sesuai kebutuhan rumah Anda"
+            android:textColor="@color/bm_gray"
+            android:textSize="14sp"
+            android:fontFamily="@font/inter_regular" />
+
+        <!-- Category Grid / List -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_product_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛋️ Ruang Tamu (Sofa &amp; Meja)"
+                android:textColor="@color/bm_dark"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_semibold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Koleksi sofa minimalis, meja kopi, dan rak TV elegan."
+                android:textColor="@color/bm_gray"
+                android:textSize="13sp"
+                android:fontFamily="@font/inter_regular" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_product_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🛏️ Kamar Tidur (Lemari &amp; Tempat Tidur)"
+                android:textColor="@color/bm_dark"
+                android:textSize="16sp"
+                android:fontFamily="@font/inter_semibold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Lemari pakaian, kasur empuk, dan meja rias modern."
+                android:textColor="@color/bm_gray"
+                android:textSize="13sp"
+                android:fontFamily="@font/inter_regular" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

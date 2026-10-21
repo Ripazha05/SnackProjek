@@ -1,13 +1,14 @@
 package com.example.pratikummobilerifa
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.example.pratikummobilerifa.Account.AccountFragment
+import com.example.pratikummobilerifa.Category.CategoryFragment
 import com.example.pratikummobilerifa.Home.HomeFragment
-import com.example.pratikummobilerifa.Message.MessageFragment
-import com.example.pratikummobilerifa.More.MoreFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class BaseActivity : AppCompatActivity() {
@@ -21,27 +22,31 @@ class BaseActivity : AppCompatActivity() {
             insets
         }
 
-        if (savedInstanceState == null) {
-            loadFragment(HomeFragment())
-        }
-
         val bottomNavView = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
+
         bottomNavView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.home -> {
+                R.id.nav_home -> {
+                    Toast.makeText(this, "Beranda diklik", Toast.LENGTH_SHORT).show()
                     loadFragment(HomeFragment())
                     true
                 }
-                R.id.message -> {
-                    loadFragment(MessageFragment())
+                R.id.nav_category -> {
+                    Toast.makeText(this, "Kategori diklik", Toast.LENGTH_SHORT).show()
+                    loadFragment(CategoryFragment())
                     true
                 }
-                R.id.more -> {
-                    loadFragment(MoreFragment())
+                R.id.nav_account -> {
+                    Toast.makeText(this, "Akun diklik", Toast.LENGTH_SHORT).show()
+                    loadFragment(AccountFragment())
                     true
                 }
                 else -> false
             }
+        }
+
+        if (savedInstanceState == null) {
+            bottomNavView.selectedItemId = R.id.nav_home
         }
     }
 

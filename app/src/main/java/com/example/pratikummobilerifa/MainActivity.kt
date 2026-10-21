@@ -7,7 +7,6 @@ import android.os.Looper
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.pratikummobilerifa.pertemuan_2.SecondActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
                 val intent = Intent(
                     this,
-                    SecondActivity::class.java
+                    BaseActivity::class.java
                 )
                 startActivity(intent)
                 finish()
