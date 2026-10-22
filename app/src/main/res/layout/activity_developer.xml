@@ -1,133 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/bm_background">
 
     <include
-        layout="@layout/toolbar" />
+        android:id="@+id/includeToolbar"
+        layout="@layout/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/includeToolbar">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp"
-            android:gravity="center_horizontal">
+            android:padding="24dp">
 
             <!-- Profile Picture -->
             <ImageView
+                android:id="@+id/imgProfile"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
                 android:background="@drawable/bg_circle_avatar"
+                android:contentDescription="Foto Profil"
                 android:padding="12dp"
-                android:src="@drawable/bm_logo"
                 android:scaleType="centerCrop"
-                android:contentDescription="Foto Profil" />
+                android:src="@drawable/bm_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/tvDeveloperName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter_bold"
                 android:text="Rifa Aulia"
                 android:textColor="@color/bm_dark"
                 android:textSize="22sp"
-                android:fontFamily="@font/inter_bold" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgProfile" />
 
             <TextView
+                android:id="@+id/tvDeveloperRole"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_semibold"
                 android:text="Android Developer &amp; Mobile Student"
                 android:textColor="@color/bm_blue"
                 android:textSize="14sp"
-                android:fontFamily="@font/inter_semibold" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeveloperName" />
 
             <!-- Card Info -->
-            <LinearLayout
-                android:layout_width="match_parent"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardInfo"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/bg_menu_card"
-                android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDeveloperRole">
 
                 <!-- Item: Sosial Media -->
                 <TextView
+                    android:id="@+id/tvHeaderSosmed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
                     android:text="Sosial Media"
                     android:textColor="@color/bm_blue"
                     android:textSize="14sp"
-                    android:fontFamily="@font/inter_bold" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
+                    android:id="@+id/tvDetailSosmed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/inter_regular"
                     android:text="Instagram: @Ripantsu\nGitHub: github.com/Ripazha05"
                     android:textColor="@color/bm_dark"
                     android:textSize="13sp"
-                    android:fontFamily="@font/inter_regular" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHeaderSosmed" />
 
                 <View
-                    android:layout_width="match_parent"
+                    android:id="@+id/divider1"
+                    android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:background="#E5E7EB"
                     android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp" />
+                    android:background="#E5E7EB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDetailSosmed" />
 
                 <!-- Item: Hobi -->
                 <TextView
+                    android:id="@+id/tvHeaderHobi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/inter_bold"
                     android:text="Hobi"
                     android:textColor="@color/bm_blue"
                     android:textSize="14sp"
-                    android:fontFamily="@font/inter_bold" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider1" />
 
                 <TextView
+                    android:id="@+id/tvDetailHobi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Bermain Game,Photography"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Bermain Game, Photography"
                     android:textColor="@color/bm_dark"
                     android:textSize="13sp"
-                    android:fontFamily="@font/inter_regular" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHeaderHobi" />
 
                 <View
-                    android:layout_width="match_parent"
+                    android:id="@+id/divider2"
+                    android:layout_width="0dp"
                     android:layout_height="1dp"
-                    android:background="#E5E7EB"
                     android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp" />
+                    android:background="#E5E7EB"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDetailHobi" />
 
                 <!-- Item: Kekuatan Terbesar -->
                 <TextView
+                    android:id="@+id/tvHeaderKekuatan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/inter_bold"
                     android:text="Kekuatan Terbesar"
                     android:textColor="@color/bm_blue"
                     android:textSize="14sp"
-                    android:fontFamily="@font/inter_bold" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider2" />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvDetailKekuatan"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/inter_regular"
                     android:text="mudah beradaptasi dengan teknologi baru, serta konsisten dalam menyelesaikan proyek tepat waktu."
                     android:textColor="@color/bm_dark"
                     android:textSize="13sp"
-                    android:fontFamily="@font/inter_regular" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvHeaderKekuatan" />
 
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

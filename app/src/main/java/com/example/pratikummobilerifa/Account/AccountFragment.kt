@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.example.pratikummobilerifa.MainActivity
 import com.example.pratikummobilerifa.R
@@ -20,19 +19,19 @@ class AccountFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_account, container, false)
 
-        val btnTentang = view.findViewById<LinearLayout>(R.id.btnTentangAplikasi)
+        val btnTentang = view.findViewById<View>(R.id.btnTentangAplikasi)
         btnTentang?.setOnClickListener {
             val intent = Intent(requireContext(), WebActivity::class.java)
             startActivity(intent)
         }
 
-        val btnDeveloper = view.findViewById<LinearLayout>(R.id.btnProfilDeveloper)
+        val btnDeveloper = view.findViewById<View>(R.id.btnProfilDeveloper)
         btnDeveloper?.setOnClickListener {
             val intent = Intent(requireContext(), DeveloperActivity::class.java)
             startActivity(intent)
         }
 
-        val btnLogout = view.findViewById<LinearLayout>(R.id.btnLogoutAccount)
+        val btnLogout = view.findViewById<View>(R.id.btnLogoutAccount)
         btnLogout?.setOnClickListener {
             val sharedPref = requireActivity().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
             val editor = sharedPref.edit()

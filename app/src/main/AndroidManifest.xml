@@ -13,47 +13,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PratikumMobileRifa">
-
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".BaseActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".pertemuan_2.SecondActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".pertemuan_3.ThirdActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan_3.ThirdResultActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
-
         <activity
             android:name=".pertemuan_3.WebActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan_3.DeveloperActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".DaftarActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".VerifikasiActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
