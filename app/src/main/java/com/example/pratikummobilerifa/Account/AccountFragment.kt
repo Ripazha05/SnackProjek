@@ -10,6 +10,8 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import com.example.pratikummobilerifa.MainActivity
 import com.example.pratikummobilerifa.R
+import com.example.pratikummobilerifa.pertemuan_3.DeveloperActivity
+import com.example.pratikummobilerifa.pertemuan_3.WebActivity
 
 class AccountFragment : Fragment() {
     override fun onCreateView(
@@ -17,6 +19,18 @@ class AccountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_account, container, false)
+
+        val btnTentang = view.findViewById<LinearLayout>(R.id.btnTentangAplikasi)
+        btnTentang?.setOnClickListener {
+            val intent = Intent(requireContext(), WebActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnDeveloper = view.findViewById<LinearLayout>(R.id.btnProfilDeveloper)
+        btnDeveloper?.setOnClickListener {
+            val intent = Intent(requireContext(), DeveloperActivity::class.java)
+            startActivity(intent)
+        }
 
         val btnLogout = view.findViewById<LinearLayout>(R.id.btnLogoutAccount)
         btnLogout?.setOnClickListener {
