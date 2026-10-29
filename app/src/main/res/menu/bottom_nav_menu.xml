@@ -11,6 +11,11 @@
         android:title="Kategori" />
 
     <item
+        android:id="@+id/nav_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Pencarian" />
+
+    <item
         android:id="@+id/nav_account"
         android:icon="@drawable/ic_more"
         android:title="Akun" />

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="#D1D5DB"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Produk Perabot"
+        android:textSize="20sp"
+        android:fontFamily="@font/inter_bold"
+        android:textColor="@color/bm_dark" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Pilih aksi untuk produk pilihan Anda:"
+        android:textSize="14sp"
+        android:textColor="@color/bm_gray"
+        android:fontFamily="@font/inter_regular" />
+
+    <Button
+        android:id="@+id/button_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button"
+        android:text="Tambah ke Keranjang"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/inter_semibold"
+        android:stateListAnimator="@null" />
+
+    <Button
+        android:id="@+id/button_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_logout_button"
+        android:text="Beli Sekarang"
+        android:textColor="@color/bm_red"
+        android:textSize="15sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/inter_semibold"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>

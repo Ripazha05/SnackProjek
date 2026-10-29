@@ -55,38 +55,6 @@
 
         </LinearLayout>
 
-        <!-- Search Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/bg_edittext"
-            android:gravity="center_vertical"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@android:drawable/ic_menu_search"
-                android:contentDescription="Cari" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@null"
-                android:hint="Cari perabot..."
-                android:paddingStart="12dp"
-                android:textColor="@color/bm_dark"
-                android:textColorHint="@color/bm_gray"
-                android:textSize="14sp"
-                android:fontFamily="@font/inter_regular"
-                android:inputType="text"
-                android:autofillHints="search" />
-        </LinearLayout>
-
         <!-- Special Promo Banner Card -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -303,13 +271,16 @@
 
             <!-- Product Card 1 -->
             <LinearLayout
+                android:id="@+id/cardProduct1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/bg_product_card"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -365,13 +336,16 @@
 
             <!-- Product Card 2 -->
             <LinearLayout
+                android:id="@+id/cardProduct2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_product_card"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -440,6 +414,7 @@
 
         <!-- Recommendation Card -->
         <LinearLayout
+            android:id="@+id/cardRecommendation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -448,7 +423,9 @@
             android:background="@drawable/bg_product_card"
             android:orientation="horizontal"
             android:padding="12dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
                 android:layout_width="80dp"
