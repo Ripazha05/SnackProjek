@@ -17,13 +17,17 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(2000) // 2 seconds delay
 
             val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+            val isCompletedOnboarding = sharedPref.getBoolean("isCompletedOnboarding", false)
             val isLogin = sharedPref.getBoolean("isLogin", false)
 
-            val intent = if (isLogin) {
+            val intent = if (!isCompletedOnboarding) {
+                Intent(this@SplashScreenActivity, OnboardingActivity::class.java)
+            } else if (isLogin) {
                 Intent(this@SplashScreenActivity, BaseActivity::class.java)
             } else {
                 Intent(this@SplashScreenActivity, MainActivity::class.java)
             }
+
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             finish()
